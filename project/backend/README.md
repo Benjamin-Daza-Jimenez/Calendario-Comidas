@@ -1,5 +1,9 @@
 # Documentación Backend
 
+### Archivos necesarios:
+.env ->
+
+
 Dependencias
 
 npm init -y
