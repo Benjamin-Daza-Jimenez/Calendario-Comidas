@@ -1,1 +1,20 @@
-.env
+# Editor configs
+.vscode/
+.idea/
+
+# Builds
+build/
+dist/
+
+# Env
+.env*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker files
+docker-compose.yml
+Dockerfile
+.docker/
