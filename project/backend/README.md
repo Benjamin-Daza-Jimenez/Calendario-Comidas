@@ -1,12 +1,12 @@
 # Documentación Backend
 
-### Archivos necesarios:
+## Archivos necesarios:
 .env
 
-### Iniciar servidor
+## Iniciar servidor
 npm run dev
 
-### Dependencias
+## Dependencias
 
 npm init -y
 * Inicia el proyecto con Node.js
