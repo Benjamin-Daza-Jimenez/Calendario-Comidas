@@ -18,5 +18,9 @@ npm install express dotenv
 npm install --save-dev nodemon
 * reinicia automáticamente el servidor ante cambios en el código.
 
+## Carpetas
 
+### src/config
+
+Configuración y conexión a la base de datos.
 
