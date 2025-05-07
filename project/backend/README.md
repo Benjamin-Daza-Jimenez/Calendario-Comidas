@@ -10,6 +10,7 @@ npm run dev
 
 npm init -y
 * Inicia el proyecto con Node.js\
+
 npm install express dotenv
 * express para GET, POST. 
 * dotenv para .env.\
