@@ -1,0 +1,204 @@
+.Calendario{
+  width:100%; /*Raro*/
+  min-width: 700px;
+  min-height: 550px;
+}
+
+.Calendario table{
+  flex-direction: column;/*Apila fila con dias y fila con semanas*/
+  box-sizing: border-box;
+  border-collapse: collapse;
+  align-items: center;
+  justify-content: center;
+  table-layout: fixed; 
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+}
+
+.Calendario thead{
+  flex-shrink: 0;
+}
+
+.Calendario tbody{
+  flex-grow: 1;
+}
+
+.Dia{
+  color: black;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 12.5%;
+}
+
+.Vacio{
+  width: 12.5%;
+  border: 1px solid #ccc;
+}
+
+.Casilla{
+  width: 12.5%;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.PrimeraCasilla{
+  height: 100%;
+  width: 12.5%;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.Contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 101%;
+  width: 101%;
+}
+
+.Semana{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  border-right: 1px solid #ccc;
+}
+
+.Semana a{
+  white-space: nowrap; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg);
+  color: black;
+}
+
+.ContenedorComida{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+
+.Desayuno{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f5d4a4;
+  border-right: 1px solid #ccc;
+}
+
+.Desayuno a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg);
+  color: black;
+  width: 100%;
+}
+
+.Almuerzo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #a6dfa9;
+}
+
+.Almuerzo a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg);
+  color: black;
+  width: 100%;
+}
+
+.Cena{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #b1d6fa;
+}
+
+.Cena a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg);
+  color: black;
+  width: 100%;  
+}
+
+.ContenedorCasilla{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.BotonA{
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.4px solid transparent;
+  background-color: #f4f3ef;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.BotonA:hover{
+  background-color: #a6dfa9;
+  border: 1.4px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.BotonC{
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.4px solid transparent;
+  background-color: #f4f3ef;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.BotonC:hover{
+  background-color: #b1d6fa;
+  border: 1.4px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.BotonD{
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.4px solid transparent;
+  background-color: #f4f3ef;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.BotonD:hover{
+  background-color: #f5d4a4;
+  border: 1.4px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
