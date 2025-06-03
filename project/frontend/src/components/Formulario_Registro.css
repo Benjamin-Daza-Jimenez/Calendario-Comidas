@@ -1,0 +1,62 @@
+.Formulario_Registro{
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    width: 400px;
+    height: 460px;
+}
+
+.Formulario_Registro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.FormR{
+    display: flex;
+    flex-direction: column;
+}
+
+.FormR div{
+    display: flex;
+    flex-direction: column;
+}
+
+.FormR label{
+    color: black;
+}
+
+.FormR input{
+    color: black;
+    background-color: #f4f3ef;
+    padding: 8px;
+    height: 15px;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.ContenedorBoton_R{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7px;
+}
+
+.ContenedorBoton_R button{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 30%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: #dad4ba;
+}
+
+.ContenedorBoton_R button:hover{
+    background-color: #d4cba4;
+    border: none;
+}

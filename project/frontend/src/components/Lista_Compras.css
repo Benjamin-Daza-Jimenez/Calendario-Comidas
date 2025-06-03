@@ -1,0 +1,34 @@
+.Lista_Compras{
+    width: 100%;
+    border-radius: 15px;
+    flex-direction: column;
+    display: flex;
+    border: 1px solid #ccc;
+    min-height: 550px;
+    background-color: #EDEAE0;
+}
+
+.top{
+    align-items: center;
+    display: flex;
+    flex-shrink: 0; /* Evita que este div se encoja si no hay suficiente espacio */
+}
+
+.top a{
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+}
+
+.down{
+    flex-grow: 1;
+    border-top: 1px solid #ccc;
+}
+
+.down a{
+    width: 100%;
+    display: flex;
+    color : #454545;
+    font-size: 12px;
+}

@@ -1,0 +1,34 @@
+.Principal {
+    top: 0;
+    left: 0;
+    min-width: 1000px;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    min-height: 100vh; /* Asegura que .Principal ocupe al menos toda la altura de la ventana */
+    background-color: #f4f3ef;
+}
+
+.Navbar {
+    position: fixed;
+    flex-direction: 0; /* Evita que el navbar se encoja si hay poco espacio */
+}
+
+.Cuerpo{
+    flex-grow: 1; /* Permite que .Cuerpo ocupe todo el espacio restante disponible */
+    width : 100%;
+    display: flex;
+    overflow-y: auto; /* Si el contenido es muy largo, permite scroll solo en el cuerpo */
+    align-items: center;
+}
+
+.Calendarioo{
+    width: 70%;
+    margin: 10px;
+
+}
+
+.Lista_Comprass{
+    width: 30%;
+    margin: 10px;
+}
+

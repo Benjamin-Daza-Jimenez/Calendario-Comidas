@@ -1,0 +1,17 @@
+.RecetasCena {
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    background-color: #f4f3ef;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.Navbar{
+    position: fixed;
+    flex-direction: 0; /* Evita que el navbar se encoja si hay poco espacio */
+}
+
+.Cuerpo{
+    flex-grow: 1; /* Permite que .Cuerpo ocupe todo el espacio restante disponible */
+    display: flex;
+    overflow-y: auto; /* Si el contenido es muy largo, permite scroll solo en el cuerpo */
+}

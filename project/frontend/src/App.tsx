@@ -1,13 +1,11 @@
-import AgregarRecetas from "./pages/AgregarRecetas";
-import Calendario from "./pages/Calendario";
-import Footer from "./pages/Footer";
-import Navbar from "./pages/Navbar";
-import PrevVerRecetas from "./pages/PrevVerRecetas";
-import Receta from "./pages/Receta";
-import verRecetas from "./pages/VerRecetas";
+import { Outlet } from 'react-router-dom';
 
 function App() {
-  return <Footer></Footer>
+  return (
+    <>
+      <Outlet></Outlet>
+    </>
+  );
 }
 
 export default App;

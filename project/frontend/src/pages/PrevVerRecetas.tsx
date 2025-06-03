@@ -1,8 +1,16 @@
+import Navbar from "../components/Navbar.tsx";
+import FiltrosPrev from "../components/FiltrosPrev.tsx";
+import './PrevVerRecetas.css';
+
 function PrevVerRecetas() {
   return (
-    <div>
-      <h1>Recetas Anteriores</h1>
-      <p>Aquí puedes ver las recetas anteriores.</p>
+    <div className="PrevVerRecetas">
+      <nav>
+        <Navbar></Navbar>
+      </nav>
+      <div className="Cuerpo">
+        <FiltrosPrev></FiltrosPrev>
+      </div>
     </div>
   );
 }

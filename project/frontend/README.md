@@ -11,12 +11,18 @@ npm run dev
 ## Dependencias
 
 npm create vite@latest frontend --template react (Esto desde la carpeta project)
--> react
--> typescript
-* react 
-* vite
+
+Elección1: react
+
+Elección2: typescript
+
+* react libreria para construir interfaces usuarias de forma declarativa
+* vite herramienta de construcción y servidor de desarrollo
 
 npm install
+
+npm install react-router-dom
+* react-router-dom manejo de rutas
 
 ## Carpetas
 

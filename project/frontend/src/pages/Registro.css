@@ -1,0 +1,19 @@
+.Registro {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    background-color: #f4f3ef;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.Navbar {
+    position: fixed;
+    flex-direction: 0; /* Evita que el navbar se encoja si hay poco espacio */
+}
+
+.Cuerpo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

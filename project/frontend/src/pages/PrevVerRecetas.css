@@ -1,0 +1,23 @@
+.PrevVerRecetas{
+    top: 0;
+    left: 0;
+    min-width: 1000px;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    background-color: #f4f3ef;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Navbar {
+    position: fixed;
+    flex-direction: 0;; /* Evita que el navbar se encoja si hay poco espacio */
+}
+
+.Cuerpo{
+    flex-grow: 1; /* Permite que .Cuerpo ocupe todo el espacio restante disponible */
+    width : 100%;
+    height: 100%;
+    display: flex; /* Habilita Flexbox */
+    align-items: center;
+}

@@ -1,0 +1,24 @@
+.Cuerpo{
+    display: flex; /* Habilita Flexbox */
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Permite que .Cuerpo ocupe todo el espacio restante disponible */
+}
+
+.Boton1{
+    flex: 1;
+    height: 100%;
+    background-color: #f5d4a4;
+}
+
+.Boton2{
+    flex: 1;
+    height: 100%;
+    background-color: #a6dfa9;
+}
+
+.Boton3{
+    flex: 1;
+    height: 100%;
+    background-color: #b1d6fa;
+}

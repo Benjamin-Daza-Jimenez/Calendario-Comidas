@@ -1,0 +1,211 @@
+.Formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 100%;
+}
+
+.Form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.FormInterno{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+}
+
+.Titulo{
+    width: 100%;
+    color: black;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #000000;
+}
+
+.ContenedorNombre{
+    width: 100%;
+    margin: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ContenedorNombre div{
+    width: 50%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Nombre{
+    width: 70%;
+}
+
+/* CSS de la tabla */
+.Ingredientes{
+    border: 2px solid black;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.EncabezadoTabla{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.item{
+    color: black;
+    font-weight: bold;
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.item.nombre{
+    flex-basis: 60%;
+    border-right: 2px solid black;
+}
+
+.item.cantidad{
+    flex-basis: 20%;
+    border-right: 2px solid black;
+}
+
+.item.medida{
+    flex-basis: 20%;
+}
+
+.CuerpoTabla{
+    width: 100%;
+    height: 23px;
+    border-top: 2px solid black;
+    display: flex;
+    text-align: center;
+}
+
+.fila{
+    color: black;
+    font-weight: bold;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.fila.nombre{
+    height: 100%;
+    flex-basis: 60%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+}
+
+.fila.nombre input{
+    width: 98%;
+    height: 70%;
+    color: black;
+    border-style: none;
+    background-color: #ffffff;
+}
+
+.fila.cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    flex-basis: 20%;
+}
+
+.fila.cantidad input{
+    width: 94%;
+    height: 70%;
+    color: black;
+    border-style: none;
+    background-color: #ffffff;
+}
+
+.fila.medida{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 20%;
+    border-radius: 6px;
+}
+
+.fila.medida select{
+    color: black;
+    background-color: #ffffff;
+}
+
+.Agregar{
+    border-top: 2px solid black;
+    width: 100%;
+    height: 23px;
+    display: flex;
+}
+
+.Agregar button{
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.4px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    background-color: #dad4ba;
+}
+
+.Formulario label{
+    font-weight: bold;
+    color: black;
+}
+
+.ContenedorNombre input{
+    color: black;
+    background-color: #f4f3ef;
+    padding: 8px;
+    height: 15px;
+    border-radius: 6px;
+}
+
+.Instrucciones{
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Instrucciones textarea{
+    color: black;
+    background-color: #f4f3ef;
+    width: 100%;
+}
+
+.ContenedorBoton{
+    width: 92%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.ContenedorBoton button{
+    color: black;
+    background-color: #80e998;
+}
