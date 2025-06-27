@@ -38,6 +38,7 @@
 
 .Casilla{
   width: 12.5%;
+  height:70px;
   color: black;
   border: 1px solid #ccc;
 }

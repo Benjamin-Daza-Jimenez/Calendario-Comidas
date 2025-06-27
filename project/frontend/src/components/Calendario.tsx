@@ -1,7 +1,50 @@
+import { useState, useEffect } from 'react';
 import './Calendario.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Calendario() {
+
+
+  {/* BEGIN PRUEBA UNITARIA */}
+  const navigate = useNavigate();
+  const [mostrar, setMostrar] = useState<boolean | undefined>(undefined);
+
+  // Leer desde localStorage al cargar
+  useEffect(() => {
+    const guardado = localStorage.getItem('mostrar');
+    if (guardado !== null) {
+      setMostrar(guardado === 'true');
+    } else {
+      setMostrar(true); // valor por defecto si no hay nada guardado
+    }
+  }, []);
+
+  // Guardar cada vez que cambie
+  useEffect(() => {
+    if (mostrar !== undefined) {
+      localStorage.setItem('mostrar', String(mostrar));
+    }
+  }, [mostrar]);
+
+  const manejarClick = () => {
+    const nuevoEstado = !mostrar;
+    setMostrar(nuevoEstado);
+    localStorage.setItem('mostrar', String(nuevoEstado)); // opcional, ya lo hace useEffect
+    navigate('/filtro-recetas/recetas-desayuno');
+  };
+  const manejarClick2 = () => {
+    const nuevoEstado = !mostrar;
+    setMostrar(nuevoEstado);
+    localStorage.setItem('mostrar', String(nuevoEstado)); // opcional, ya lo hace useEffect
+    navigate('/temp'); // una ruta temporal o inexistente
+    setTimeout(() => navigate('/calendario'), 1);
+  };
+
+  if (mostrar === undefined) return null; // Espera a que cargue localStorage
+
+  {/* END PRUEBA UNITARIA */}
+
+
   return (
     <div className="Calendario">
       <table>
@@ -32,7 +75,30 @@ function Calendario() {
                 </div>
               </div>
             </td>
-            <td className='Casilla'><Link to='/filtro-recetas/recetas-desayuno'><div className='ContenedorCasilla'><button className='BotonD'></button></div></Link></td>
+            {mostrar ? 
+              <td className='Casilla'><div className='ContenedorCasilla'><button className='BotonD' onClick={manejarClick}><a style={{ color: 'black', fontWeight: 'bold' }}></a></button></div></td>
+            :
+              <td className='Casilla'>
+                <div className='ContenedorCasilla'>
+
+                  <div className='B' style={{background:'#f5d4a4', flexDirection:'column', width:'100%', height:'100%', }}>
+                    <div style={{justifyContent:'flex-end', display:'flex'}}>
+                        <button style={{border:'1px solid black', borderRadius:'20%', height:'20px', width:'20px', background:'red', padding:'0'}} onClick={manejarClick2}>
+                          <a style={{ color: 'black'}}>
+                            X
+                          </a>
+                        </button>
+                    </div>
+                    <div style={{display: 'flex', alignContent: 'center', justifyContent: 'center',}}>
+                      <a style={{ color: 'black', fontWeight: 'bold', textAlign: 'center'}}>
+                        Pan Amasado
+                      </a>       
+                    </div>
+                  </div>
+
+                </div>
+              </td>
+            }
             <td className='Casilla'><Link to='/filtro-recetas/recetas-desayuno'><div className='ContenedorCasilla'><button className='BotonD'></button></div></Link></td>
             <td className='Casilla'><Link to='/filtro-recetas/recetas-desayuno'><div className='ContenedorCasilla'><button className='BotonD'></button></div></Link></td>
             <td className='Casilla'><Link to='/filtro-recetas/recetas-desayuno'><div className='ContenedorCasilla'><button className='BotonD'></button></div></Link></td>

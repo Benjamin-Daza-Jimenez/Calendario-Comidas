@@ -10,8 +10,15 @@
     flex-direction: 0; /* Evita que el navbar se encoja si hay poco espacio */
 }
 
-.Cuerpo{
+.Cuerpoo{
     flex-grow: 1; /* Permite que .Cuerpo ocupe todo el espacio restante disponible */
     display: flex;
+    justify-content: left;
     overflow-y: auto; /* Si el contenido es muy largo, permite scroll solo en el cuerpo */
+}
+
+.Cuadroo{
+    justify-content: center;
+    justify-content: left;
+    margin: 1%;
 }

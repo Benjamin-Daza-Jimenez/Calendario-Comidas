@@ -31,20 +31,53 @@
     border-bottom: 2px solid #000000;
 }
 
-.ContenedorNombre{
+.ContenedorArriba{
     width: 100%;
-    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ContenedorNombre{
+    width: 50%;
+    margin: 19px;
     padding-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
 .ContenedorNombre div{
-    width: 50%;
+    width: 100%;
     margin-left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.Categoria{
+    width: 50%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.CLabel{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.CCheck{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.Categoria a{
+    color: black;
+    margin-right: 20px;
 }
 
 .Nombre{

@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Formulario.css'
 
 interface Ingrediente{
@@ -9,6 +10,41 @@ interface Ingrediente{
 }
 
 function Formulario() {
+
+
+    {/* BEGIN PRUEBA UNITARIA */}
+    const navigate = useNavigate();
+    const [mostrar2, setMostrar2] = useState<boolean | undefined>(undefined);
+
+    // Leer desde localStorage al cargar
+    useEffect(() => {
+        const guardado2 = localStorage.getItem('mostrar2');
+        if (guardado2 !== null) {
+        setMostrar2(guardado2 === 'true');
+        } else {
+        setMostrar2(true); // valor por defecto si no hay nada guardado
+        }
+    }, []);
+
+    // Guardar cada vez que cambie
+    useEffect(() => {
+        if (mostrar2 !== undefined) {
+        localStorage.setItem('mostrar2', String(mostrar2));
+        }
+    }, [mostrar2]);
+
+    const manejarClick = () => {
+        const nuevoEstado2 = !mostrar2;
+        setMostrar2(nuevoEstado2);
+        localStorage.setItem('mostrar2', String(nuevoEstado2)); // opcional, ya lo hace useEffect
+        navigate('/filtro-recetas/recetas-almuerzo');
+    };
+
+
+
+    {/* END PRUEBA UNITARIA */}
+
+
     const nextId = useRef(0);
 
     const [ingredientes, setIngredientes] = useState<Ingrediente[]>(() => {
@@ -44,15 +80,42 @@ function Formulario() {
     //Variables que guardan el nombre
     const [nombre, setNombre] = useState('');
 
+
+
+    {/* BEGIN PRUEBA UNITARIA */}
+    if (mostrar2 === undefined) return null; // Espera a que cargue localStorage
+    {/* END PRUEBA UNITARIA */}
+
+
+
+
     return(
         <div className="Formulario">
             <div className='Form'>
                 <form className='FormInterno'>
                     <div className='Titulo'>Nueva Receta</div>
-                    <div className='ContenedorNombre'>
-                        <div>
-                            <label>Nombre de la Receta:</label>
-                            <input className='Nombre' type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+                    <div className='ContenedorArriba'>
+                        <div className='ContenedorNombre'>
+                            <div>
+                                <label>Nombre de la Receta:</label>
+                                <input className='Nombre' type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+                            </div>
+                        </div>
+                        <div className='Categoria'>
+                            <div className='CLabel'>
+                                <label>Categoría:</label>
+                            </div>
+                            <div className='CCheck'>
+                                <div>
+                                    <input type="checkbox"></input><a>Desayuno</a>
+                                </div>
+                                <div>
+                                    <input type="checkbox"></input><a>Almuerzo</a>
+                                </div>
+                                <div>
+                                    <input type="checkbox"></input><a>Cena</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     {/*Ingredientes*/}
@@ -74,6 +137,7 @@ function Formulario() {
                                 <select value={ingrediente.medida} onChange={(e) => handleInputChange(ingrediente.id, 'medida', e.target.value)}>
                                     <option value="kg">kg</option>
                                     <option value="g">g</option>
+                                    <option value="L">L</option>
                                     <option value="ml">ml</option>
                                 </select>
                             </div>
@@ -94,7 +158,18 @@ function Formulario() {
                     </div>
                     {/*Guardar receta*/}
                     <div className='ContenedorBoton'>
-                        <button type='submit'>Guardar Receta</button>
+
+
+                        {/* BEGIN PRUEBA UNITARIA */}
+                        {mostrar2 ? 
+                            <button type='submit' onClick={manejarClick}>Guardar Receta</button>
+                        :
+                            <button type='submit' onClick={manejarClick}>Guardar Receta</button>
+                        }
+                        {/* END PRUEBA UNITARIA */}
+                        
+
+                        
                     </div>
                 </form>
             </div>

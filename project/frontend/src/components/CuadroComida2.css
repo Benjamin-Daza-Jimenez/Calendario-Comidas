@@ -1,0 +1,69 @@
+.CuadroComida2{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #a6dfa9;
+}
+
+.NombreC{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.IngredienteC div{
+    width: 100%;
+    color: black;
+    margin-left: 5px;
+}
+
+.ITitulo{
+    font-weight: bold;
+}
+
+.Ingredientee{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.IIzq{
+    display: flex;
+    flex-direction: row;
+}
+
+.IIzq div{
+    width: 50%;
+}
+
+.InstruccionesC{
+    color: black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.InstruccionesC div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.CuadroBotonesComida{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.BotonVerMas{
+    color: black;
+    background-color: rgb(39, 219, 219);
+}
+
+.BotonAgregar{
+    color: black;
+    background-color: #80e998;
+}

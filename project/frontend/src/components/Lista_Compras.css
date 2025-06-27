@@ -23,12 +23,13 @@
 
 .down{
     flex-grow: 1;
+    height: 100px;
     border-top: 1px solid #ccc;
 }
 
 .down a{
     width: 100%;
     display: flex;
-    color : #454545;
-    font-size: 12px;
+    color : black;
+    font-size: 14px;
 }
